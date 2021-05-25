@@ -9,7 +9,7 @@
 #include <algorithm>
 
 
-void revert_string(const std::string &input_str, std::ofstream &output_str);
+std::string convert(const int &input_str);
 
 
 #endif

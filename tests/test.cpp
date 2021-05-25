@@ -3,18 +3,11 @@
 #include <gtest/gtest.h>
 
 
-TEST(ReverseStr, InFileStream)
+TEST(Convert, TEST)
 {
-    std::string InputText = "HelloWorld!";
-    std::string FilePath = "Output.txt";
-    std::ofstream Out{ FilePath };
+int a=123;
+std::string ans = IntToBin(a);
 
-    revert_string(InputText, Out);
-    Out.close();
-
-    std::string Result;
-    std::ifstream in{ FilePath };
-    in >> Result;
-
-    EXPECT_EQ(Result, "!dlroWolleH");
+EXPECT_EQ("1111011", ans);
 }
+

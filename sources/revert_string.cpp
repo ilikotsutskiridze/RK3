@@ -2,12 +2,17 @@
 #include <revert_string.hpp>
 
 
-void revert_string(const std::string& input_str, std::ofstream& output_str)
+std::string convert(const int &a)
 {
-    std::string tmp_str = input_str;
-
-    std::reverse(tmp_str.begin(), tmp_str.end());
-
-    output_str << tmp_str;
+    int bin=0, j;
+ 
+    for(j=0; a>0; j++)
+    {
+        bin+=(a%2)*pow(10.0,j);
+        a/=2;
+    }
+    
+    std::string s=std::to_string(bin);
+    return s;
 }
 

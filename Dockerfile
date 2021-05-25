@@ -5,9 +5,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt update
 RUN apt install -yy git g++ cmake vim
-RUN mkdir -p ~/workspace/projects/supertask
-WORKDIR ~/workspace/projects/supertask
-RUN git clone https://github.com/ilikotsutskiridze/RK2.git .
+RUN mkdir -p ~/workspace/projects/RK3
+WORKDIR ~/workspace/projects/RK3
+RUN git clone https://github.com/ilikotsutskiridze/RK3.git .
 
 
 RUN cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON
